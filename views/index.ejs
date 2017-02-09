@@ -6,11 +6,55 @@
 
 	<title>Cute or Not</title>
 
-	<!-- Express assumes you're already in the public folder -->
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Express assumes you're already in the "public" folder -->
 	<link rel="stylesheet" href="/stylesheets/styles.css">
+
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </head>
 <body>
+
+	<!-- browser can read dom-level js so we have a lot to work with! -->
+
+	<!-- we need an if/else statement here because we don't have an img to render if you have already guessed all of the images-->
+
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-sm-12 text-center title">
+				<h1 class="text-center"><%=title %></h1>
+			</div>
+
+			<%if (typeof msg !== 'undefined') { %>				
+				<h1>You're all done! Such hard work!</h1>
+			<% }else{ %>
+				<div class="col-sm-8 vote-box">
+					<div class="col-sm-12 text-center img-box">
+						<img class="img-card" src="<%=imageToRender%>" alt="animals" />
+						<h3><%=description%></h3>
+					</div>
+					<div class="col-sm-6 text-center btn-box">
+						<a class="text-center" href="/vote/up/<%= imageID %>">
+							<input type="button" class="btn btn-lg btn-success" value="Cute!" />
+						</a>
+						<a class="text-center" href="/vote/down/<%=imageID%>">
+							<input type="button" class="btn btn-lg btn-danger" value="Nope" />
+						</a>
+					</div>
+				</div>
+			<% } %>
+		</div>
+	</div>
 	
 </body>
 </html>

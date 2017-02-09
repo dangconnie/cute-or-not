@@ -7,4 +7,32 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url("/images/background.jpg") no-repeat fixed;
+  background-size: cover;
+}
+
+/* line 30, ../../compass/sass/styles.scss */
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/* line 36, ../../compass/sass/styles.scss */
+h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+/* line 41, ../../compass/sass/styles.scss */
+img {
+  display: block;
+  margin: auto;
+  border-radius: 50px;
+  border: 10px solid white;
+}
+
+/* line 48, ../../compass/sass/styles.scss */
+.btn {
+  margin: 10px;
 }
