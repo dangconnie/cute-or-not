@@ -32,6 +32,11 @@ img {
   margin: 10px;
 }
 
+/* line 49, ../../compass/sass/styles.scss */
+.btn-box:hover {
+  box-shadow: white;
+}
+
 @-webkit-keyframes heartbeat {
   0% {
     -moz-transform: rotate(45deg) scale(1);
@@ -160,21 +165,21 @@ img {
     transform: rotate(45deg) scale(1);
   }
 }
-/* line 81, ../../compass/sass/styles.scss */
+/* line 85, ../../compass/sass/styles.scss */
 body {
   text-align: center;
   padding: 50px;
 }
 
 /* Styles for old versions of IE */
-/* line 87, ../../compass/sass/styles.scss */
+/* line 91, ../../compass/sass/styles.scss */
 #cute {
   font-family: sans-serif;
   font-weight: 100;
 }
 
 /* :not(:required) hides this rule from IE9 and below */
-/* line 93, ../../compass/sass/styles.scss */
+/* line 97, ../../compass/sass/styles.scss */
 #cute:not(:required) {
   -webkit-animation: heartbeat 1300ms ease 0s infinite normal;
   -khtml-animation: heartbeat 1300ms ease 0s infinite normal;
@@ -197,13 +202,13 @@ body {
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 }
-/* line 105, ../../compass/sass/styles.scss */
+/* line 109, ../../compass/sass/styles.scss */
 #cute:not(:required):after, #cute:not(:required):before {
   position: absolute;
   content: "";
   background: #3bff00;
 }
-/* line 111, ../../compass/sass/styles.scss */
+/* line 115, ../../compass/sass/styles.scss */
 #cute:not(:required):before {
   -moz-border-radius-topleft: 12px;
   -webkit-border-top-left-radius: 12px;
@@ -216,7 +221,7 @@ body {
   width: 36px;
   height: 24px;
 }
-/* line 119, ../../compass/sass/styles.scss */
+/* line 123, ../../compass/sass/styles.scss */
 #cute:not(:required):after {
   -moz-border-radius-topleft: 12px;
   -webkit-border-top-left-radius: 12px;

@@ -15,6 +15,15 @@ var connection = mysql.createConnection({
 //After this line runs, we will have a connection to sql
 connection.connect();
 
+//Include Multer module. Makes it easier to upload files
+var multer = require('multer');
+//Upload is the multer module with a dest object passed to it
+var upload = multer({ dest: 'public/images'});
+//Specify type to use later. It comes from upload.
+var type = upload.single('imageToUpload');
+//We will need fs to read the file, it's part of core
+var fs = require('fs');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	var getImageQuery = "SELECT * FROM images";
@@ -68,6 +77,7 @@ router.get('/vote/:voteDirection/:imageID',(req,res,next)=>{
 });
 
 router.get('/standings', function(req, res, next) {
+
   res.render('standings', { title: 'Standings' });
 });
 
@@ -91,6 +101,32 @@ router.get('/testQ',(req, res, next)=>{
 			res.json(results);
 		});	
 	})
+});
+
+//If you want to give option for users to upload their own images
+router.get('/uploadImage', (req, res, next)=>{
+	res.render('uploadImage', {});
+});
+
+router.post('/formSubmit', type, (req, res, next)=>{
+	//save the path where the file is at temporarily
+	var tmpPath = req.file.path;
+	//Set up the target path + the originalname of the file
+	var targetPath = 'public/images/'+req.file.originalname;
+	//Use fs to read the file at req.file.path then write it to the correct place
+	fs.readFile(tmpPath, (error, fileContents)=>{
+		//3 arguments of writeFile: where, what, callback
+		fs.writeFile(targetPath, fileContents, (error)=>{
+			if (error) throw error; //handles read/write erros
+			var insertQuery = "INSERT INTO images(imageUrl) VALUE (?)";
+			connection.query(insertQuery, [req.file.originalname], (dberror, results, fields)=>{
+					if(dberror) throw dberror;//handles sql errors
+					res.redirect('/?file="uploaded');
+			})
+			// res.json("Upload successful")
+		})
+	})
+	// res.json(req.file);
 });
 
 module.exports = router;

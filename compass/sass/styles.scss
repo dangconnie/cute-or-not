@@ -46,6 +46,10 @@ img{
 	margin: 10px;
 }
 
+.btn-box:hover{
+    box-shadow: white;
+}
+
 $heartbeat-color: #e87;
 $heartbeat-size: 36px; // must be divisible by 2 and 3
 $heartbeat-rotation: rotate(45deg);
