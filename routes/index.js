@@ -71,4 +71,26 @@ router.get('/standings', function(req, res, next) {
   res.render('standings', { title: 'Standings' });
 });
 
+router.get('/testQ',(req, res, next)=>{
+	// var id1 = [1];
+	// var id2 = [3];
+	// var query = "SELECT * FROM images WHERE id > ? AND id < ?";
+	// ? = 1 and 2
+	//if you have a variable above (var id, [id] is that value. If not, you can directly put the number into [id] below. Both work.
+	// connection.query(query, [id1, id2], (error, results, fields)=>{
+		// res.json(results);
+	// })
+
+	// You would want to use something like this for safety (ex: input forms)
+	var imageIDVoted = 3;
+	var voteDirection = "up";
+	var insertQuery = "INSERT INTO votes (ip, imageID, voteDirection) VALUES (?, ?, ?)"
+	connection.query(insertQuery, [req.ip, imageIDVoted, voteDirection], (error, results, fields)=>{
+		var query = "SELECT * FROM votes";
+		connection.query(query, (error, results, fields)=>{
+			res.json(results);
+		});	
+	})
+});
+
 module.exports = router;

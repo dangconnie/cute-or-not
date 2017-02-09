@@ -1,0 +1,14 @@
+<!-- How to calculate standings? Sum up number of votes for each direction. Below might not work because we are summing "up", "down" and "meh". Query below works if you used 1 or -1 to count votes: -->
+
+	<!-- SELECT images.id, images.imageUrl, images.description, COUNT(votes.votesDirection) AS totalvotes FROM votes
+		INNER JOIN images ON images.id = votes.imageID
+		GROUP BY votes.imageID; -->
+
+	<!-- Put it into groups before we can sum (GROUP BY). Everything with a unique imageID will be put into the same group. So it will sum everything for group 1, group 2 and group 3. -->
+
+
+<!-- 
+Count: # of rows
+Sum: sum of  -->
+
+<!-- WHERE works on rows. HAVING works on groups. -->
