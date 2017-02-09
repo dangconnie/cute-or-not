@@ -11,20 +11,15 @@ body {
   background-size: cover;
 }
 
-/* line 30, ../../compass/sass/styles.scss */
+/* line 31, ../../compass/sass/styles.scss */
 h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 80px;
   font-weight: bold;
+  display: block;
 }
 
-/* line 36, ../../compass/sass/styles.scss */
-h2 {
-  text-align: center;
-  font-size: 40px;
-}
-
-/* line 41, ../../compass/sass/styles.scss */
+/* line 38, ../../compass/sass/styles.scss */
 img {
   display: block;
   margin: auto;
@@ -32,7 +27,205 @@ img {
   border: 10px solid white;
 }
 
-/* line 48, ../../compass/sass/styles.scss */
+/* line 45, ../../compass/sass/styles.scss */
 .btn {
   margin: 10px;
+}
+
+@-webkit-keyframes heartbeat {
+  0% {
+    -moz-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+  14% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+  28% {
+    -moz-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+  42% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+  70% {
+    -moz-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+}
+@-moz-keyframes heartbeat {
+  0% {
+    -moz-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+  14% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+  28% {
+    -moz-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+  42% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+  70% {
+    -moz-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+}
+@-o-keyframes heartbeat {
+  0% {
+    -moz-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+  14% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+  28% {
+    -moz-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+  42% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+  70% {
+    -moz-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+}
+@keyframes heartbeat {
+  0% {
+    -moz-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+  14% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+  28% {
+    -moz-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+  42% {
+    -moz-transform: rotate(45deg) scale(1.3);
+    -ms-transform: rotate(45deg) scale(1.3);
+    -webkit-transform: rotate(45deg) scale(1.3);
+    transform: rotate(45deg) scale(1.3);
+  }
+  70% {
+    -moz-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    -webkit-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+  }
+}
+/* line 81, ../../compass/sass/styles.scss */
+body {
+  text-align: center;
+  padding: 50px;
+}
+
+/* Styles for old versions of IE */
+/* line 87, ../../compass/sass/styles.scss */
+#cute {
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+/* :not(:required) hides this rule from IE9 and below */
+/* line 93, ../../compass/sass/styles.scss */
+#cute:not(:required) {
+  -webkit-animation: heartbeat 1300ms ease 0s infinite normal;
+  -khtml-animation: heartbeat 1300ms ease 0s infinite normal;
+  -moz-animation: heartbeat 1300ms ease 0s infinite normal;
+  -ms-animation: heartbeat 1300ms ease 0s infinite normal;
+  -o-animation: heartbeat 1300ms ease 0s infinite normal;
+  animation: heartbeat 1300ms ease 0s infinite normal;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 36px;
+  height: 36px;
+  -moz-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
+  -webkit-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+/* line 105, ../../compass/sass/styles.scss */
+#cute:not(:required):after, #cute:not(:required):before {
+  position: absolute;
+  content: "";
+  background: #7b00ff;
+}
+/* line 111, ../../compass/sass/styles.scss */
+#cute:not(:required):before {
+  -moz-border-radius-topleft: 12px;
+  -webkit-border-top-left-radius: 12px;
+  border-top-left-radius: 12px;
+  -moz-border-radius-bottomleft: 12px;
+  -webkit-border-bottom-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  top: 12px;
+  left: 0;
+  width: 36px;
+  height: 24px;
+}
+/* line 119, ../../compass/sass/styles.scss */
+#cute:not(:required):after {
+  -moz-border-radius-topleft: 12px;
+  -webkit-border-top-left-radius: 12px;
+  border-top-left-radius: 12px;
+  -moz-border-radius-topright: 12px;
+  -webkit-border-top-right-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0;
+  left: 12px;
+  width: 24px;
+  height: 12px;
 }

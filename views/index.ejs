@@ -30,30 +30,37 @@
 	<!-- we need an if/else statement here because we don't have an img to render if you have already guessed all of the images-->
 
 	<div class="container">
+
 		<div class="row text-center">
 			<div class="col-sm-12 text-center title">
 				<h1 class="text-center"><%=title %></h1>
 			</div>
+		</div>
 
-			<%if (typeof msg !== 'undefined') { %>				
-				<h1>You're all done! Such hard work!</h1>
+			<%if (typeof msg !== 'undefined') { %>		
+				<h2>All done! <br><br>Look at you working hard and all. <br><br> Or are you hardly working?</h2>
 			<% }else{ %>
-				<div class="col-sm-8 vote-box">
+				<div class="vote-box">
 					<div class="col-sm-12 text-center img-box">
 						<img class="img-card" src="<%=imageToRender%>" alt="animals" />
-						<h3><%=description%></h3>
+						<h2><%=description%></h2>
 					</div>
-					<div class="col-sm-6 text-center btn-box">
-						<a class="text-center" href="/vote/up/<%= imageID %>">
-							<input type="button" class="btn btn-lg btn-success" value="Cute!" />
+					<div class="text-center btn-box">
+						<a class="text-center" id="cute" href="/vote/up/<%= imageID %>">
+							<input type="button" class="btn btn-lg btn-secondary" value="Cute!" />
 						</a>
+
+						<a class="text-center" href="/vote/meh/<%= imageID %>">
+							<input type="button" class="btn btn-lg btn-primary" value="Meh" />
+						</a>
+
 						<a class="text-center" href="/vote/down/<%=imageID%>">
 							<input type="button" class="btn btn-lg btn-danger" value="Nope" />
 						</a>
 					</div>
 				</div>
 			<% } %>
-		</div>
+		
 	</div>
 	
 </body>
