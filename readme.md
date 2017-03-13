@@ -1,1 +1,1 @@
-# This is a voting game. Is it cute or not?
+# This app utilizes frontend and backends skills learned in bootcamp. Vote whether each animal is cute or not!
